@@ -9,6 +9,11 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+
+  grid-template:  150px 150px 750px 150px / 445px 1335px; 
+  gap: 15px
+  /* 2 cols, 4 rows */
 }
 
 .container div {
@@ -22,22 +27,31 @@ html {
 
 .header {
   background-color: #006157;
+  /* span goes here */
+  grid-column: 1 / 4;
 }
 
 .sidebar {
   background-color: #005B94;
+  /* span across first col */
+  grid-row:2/4;
 }
 
 .nav {
   background-color: #642cde;
+  /* span across second col */
 }
 
 .article {
   background-color: #7E1DC3;
+  /* span across second col */
+  grid-column: 2/4;
 }
 
 .footer {
   background-color: #393f4d;
+  /* span goes here */
+  grid-column: 1/4;
 }
 
 .article p {
